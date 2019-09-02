@@ -1,5 +1,5 @@
 fn main() {
-    let x = 12;
+    let mut x = 12;
 
     println!("Value of x: {}", x);
 
