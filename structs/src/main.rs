@@ -6,7 +6,7 @@
 fn print_point(p: &Point) {
     println!("point ({}, {})", p.x, p.y);
 }*/
-
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
@@ -31,10 +31,11 @@ fn main() {
 
     println!(
         "The area of the rectangle is {} square pixels.",
-        area(r.width, r.height)
+        area(&r)
     );
+    println!("r: {:?}", r);
 }
 
-fn area(width: u32, height: u32) -> u32 {
-    width * height
+fn area(rect: &Rectangle) -> u32 {
+    rect.width * rect.height
 }
