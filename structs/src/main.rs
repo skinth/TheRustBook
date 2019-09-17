@@ -16,6 +16,12 @@ impl Rectangle {
     fn area(&self) -> u32 {
         self.width*self.height
     }
+
+    //associated function 
+    //(this is not a method! A method must have the self parameter)
+    fn square(size: u32) -> Rectangle {
+        Rectangle { width: size, height: size }
+    }
 }
 
 fn main() {
@@ -40,4 +46,5 @@ fn main() {
         r.area()
     );
     println!("r: {:?}", r);
+    println!("square: {:?}", Rectangle::square(12));
 }
