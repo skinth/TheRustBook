@@ -12,6 +12,12 @@ struct Rectangle {
     height: u32,
 }
 
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width*self.height
+    }
+}
+
 fn main() {
     /*let p: Point = Point {
         x: 4,
@@ -31,11 +37,7 @@ fn main() {
 
     println!(
         "The area of the rectangle is {} square pixels.",
-        area(&r)
+        r.area()
     );
     println!("r: {:?}", r);
-}
-
-fn area(rect: &Rectangle) -> u32 {
-    rect.width * rect.height
 }
